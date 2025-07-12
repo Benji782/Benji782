@@ -1,6 +1,6 @@
 :root{
 --bondi-blue: #1386a0;
---blue-green: #029BBE;
+--blue-green: #5685ec;
 --moonstone: #2AB8CC;
 --sky-blue: #51CDE3;
 --sky-blue-2: #8ABDC9; 
@@ -9,10 +9,13 @@
     margin:0;
     font-size: 16px;
     text-decoration: 0;
+    box-sizing: border-box;
     font-family: "DM Serif Text", Georgia, 'Times New Roman', Times, serif;
-    background-color: #0ba9cc;
 }
-
+main{
+    background-color: #69b1ce;
+    height: 100vh;
+}
 .home-wrapper{
     width:65%;
     position: absolute;
@@ -42,18 +45,23 @@ a:visited{
     padding:30px;
     display: flex;
     flex-direction: column;
+    max-width:20vw;
     margin:20px;
-    width:20vw;
     height:auto;
-    background-color: rgb(89, 162, 180);
+    background-color: #a8dce9;
     border-radius: 30px;
 }
 .filter label{
     font-size: 2rem;
 }
-.filter select{
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.filter-category{
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    margin: 10px;
+}
+.filter-category label{
+    font-size: 1.75rem;
 }
 .go-home{
     z-index: 1;
@@ -64,12 +72,8 @@ a:visited{
     justify-content: space-between;
     z-index:-1
 }
-.works{
-    background-color: rgb(102, 102, 236);
-    display: flex;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(autofill);
-    gap:10px;
+.artwork{
+    background-color: #a8e3fa;
     height: 100vh;
     width:65vw;
     position:absolute;
@@ -78,18 +82,17 @@ a:visited{
     margin:10px;
     overflow: scroll;
 }
-.big-canvas{
-    height:300px;
-    width:200px;
-    background-color: rgb(85, 75, 75);
+.artwork-content{
+    width:100%;
+    display: inline-block;
+    columns: 3;
+    align-items: center;
+    gap:20px;
+    background-color: gray;
+    justify-content: space-between;
 }
-.small-canvas{
-    height:150px;
-    width:150px;
-    background-color: black;
-}
-.med-canvas{
-    height:200px;
-    width:150px;
-    background-color: black;
+.artwork img{
+    max-width:300px;
+    height: fit-content;
+    border-radius: 20%;
 }
